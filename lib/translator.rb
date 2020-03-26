@@ -27,24 +27,24 @@ def get_japanese_emoticon(yaml_file, emoticon)
   # loads the yaml file by calling the 'load_library' method
   # when calling the 'load_library' method it brings over the new hash with the new key value pairs
   # '['get_emoticon'][emoticon]' is to grab the passed english emoticon that is in the 'get_emoticon' which is the japanese emoticon
-  japanese_emoticon = load_library(yaml_file)['get_emoticon'][emoticon]
+  japanese = load_library(yaml_file)['get_emoticon'][emoticon]
   
   # if japanese_emoticon return false, meaning there is no english emoticon that is equal to the japanese emoticon, it will return that
   
-  if !japanese_emoticon
+  if !japanese
       return "Sorry, that emoticon was not found"
   end
   
   # returns the emoticon if the if statement above is not evaluted
-  japanese_emoticon
+  japanese
 end
 
 def get_english_meaning(yaml_file, emoticon)
-    english_emoticon = load_library(yaml_file)['get_meaning'][emoticon]
+    english = load_library(yaml_file)['get_meaning'][emoticon]
     
-    if !english_emoticon
+    if !english
       return "Sorry, that emoticon was not found"
     end
   
-  english_emoticon
+  english
 end
